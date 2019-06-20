@@ -1,0 +1,373 @@
+.slider
+  &_recommend
+    height: 111px
+  &_overflow
+    overflow: hidden
+  &_item
+    background-repeat: no-repeat
+  &_aliances
+    li
+      text-align: center
+      vertical-align: middle
+      position: relative
+      +MQ(M)
+        text-align: left
+    .slick-slide
+      float: inherit
+      display: inline-block !important
+
+.slider
+  &_intro
+    .slick-dots
+      bottom: 150px
+      left: 150px
+
+
+.slider
+	&_intro
+		li
+			.bgi
+				height: 100vh
+		.slick-list
+			box-shadow: 0px 10px 12px 0px rgba($black, .75)
+
+
+ul.slick-dots
+  position: absolute
+  bottom: -25px
+  display: block
+  width: 100%
+  padding: 0
+  margin: 0
+  list-style: none
+  text-align: center
+  li
+    position: relative
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin: 0 5px
+    padding: 0
+    cursor: pointer
+    button
+      font-size: 0
+      line-height: 0
+      display: block
+      width: 20px
+      height: 20px
+      padding: 5px
+      cursor: pointer
+      color: transparent
+      border: 0
+      outline: none
+      background: $darkBlue
+      border-radius: 50%
+      +press
+        outline: none
+        &:before
+          opacity: 1
+      &:before
+        font-size: 26px
+        line-height: 20px
+        position: absolute
+        top: 0
+        left: 0
+        width: 20px
+        height: 20px
+        content: '•'
+        text-align: center
+        color: $white
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        border-radius: 50%
+      &:after
+        background-color: $darkBlue
+        display: inline-block
+        font-size: 1.2rem
+        margin-left: 15px
+        opacity: 0.3
+        font-family: $primary-font
+        font-weight: 700
+        vertical-align: middle
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 1)
+        border-radius: 50%
+      &:before
+        color: white
+        vertical-align: middle
+    &.slick-active
+      button:after
+        opacity: .75
+        color: black
+
+.slick-dots li.slick-active button
+  background-color: $darkRed
+
+.slick
+  $wprev: 44px
+  &-prev,
+  &-next
+    background-color: transparent
+    position: absolute
+    bottom: 45%
+    z-index: 1
+    -webkit-appearance: none
+    box-sizing: inherit
+    border: none
+    white-space: nowrap
+    font-size: 0
+    +MQ(SL)
+      bottom: 17.8%
+    &:focus
+      outline: none
+    &:before
+      animation-name: zoomIn
+  &-prev
+    left: 0
+    +MQ(SL)
+      left: 1%
+    &:before
+      content: ""
+      width: $wprev
+      height: $wprev
+      display: inline-block
+      background-image: url('#{$iconPath}icon_prev.svg')
+      background-repeat: no-repeat
+      -webkit-background-size: contain
+      background-size: contain
+      background-position: center center
+      text-align: right
+      vertical-align: middle
+      transition: $trs-site
+
+  &-next
+    right: 0%
+    +MQ(SL)
+      right: 5%
+    &:before
+      content: ""
+      width: $wprev
+      height: $wprev
+      display: inline-block
+      //background-image: url('#{$gitPath}theme/icon_next.svg')
+      background-image: url('#{$iconPath}icon_next.svg')
+      background-repeat: no-repeat
+      -webkit-background-size: contain
+      background-size: contain
+      background-position: center center
+      text-align: right
+      vertical-align: middle
+      transition: $trs-site
+
+
+.slider_team
+  .slick-slide
+    .box_team
+      border: 1px solid transparent
+      border-radius: 8px
+      padding: 25px 0 25px
+      background-color: $white
+      transform: translateY(-50px)
+      transition: $trs-site
+      +MQMAX(S)
+        width: 85%
+        margin: 0 auto
+      figcaption
+        text-align: center
+        padding: 0 12px
+        small, .h6
+          color: transparent
+
+  .slick-slide
+    z-index: 1
+    position: relative
+    .box_team
+      box-shadow: 0px 0px 32px -1px rgba($white, 0)
+    img
+      border-top: 1px solid transparent
+      border-bottom: 1px solid transparent
+      margin-top: 25px
+      margin-bottom: 25px
+    &.slick-center
+      z-index: 22
+      .box_team
+        border: 1px solid $darkRed
+        box-shadow: 0px 0px 32px -1px rgba($darkRed, 0.3)
+        figcaption
+          .h6
+            color: $darkRed
+          small
+            color: $darkBlue
+      img
+        border-top: 1px solid $darkRed
+        border-bottom: 1px solid $darkRed
+  .slick-slide
+    padding-bottom: 70px
+    padding-top: 70px
+  .slick-slide.slick-cloned:last-child
+    //display: none
+  .slick-slide
+    img
+      opacity: .25
+      width: 99%
+      margin: 25px auto
+    &.slick-center
+      img
+        opacity: 1
+  .slick-track
+    .slick-list
+      div
+        background: $gainsboro
+  .slick
+    $wprev: 44px
+    &-prev,
+    &-next
+      background-image: linear-gradient(to right, #e5141d, #e91e31, #eb2943, #ec3554, #ec4063)
+      width: $wprev
+      height: $wprev
+      border-radius: 50%
+      transition: $trs-site
+      bottom: 9%
+      +MQ(M)
+        bottom: 29%
+      +MQ(SL)
+        bottom: 23%
+      &:focus
+        outline: none
+      +press
+        box-shadow: 0 9px 17px rgba($darkRed, 0.3)
+    &-prev
+      left: 23%
+      +MQ(SL)
+        left: 34%
+      //right: $wprev*2.5
+      &:before
+        content: ""
+        width: 16px
+        height: 8px
+        display: inline-block
+        background-image: url('#{$iconPath}icon_left_mini--white.svg')
+        background-repeat: no-repeat
+        -webkit-background-size: contain
+        background-size: contain
+        background-position: center center
+        text-align: right
+        vertical-align: middle
+        transition: $trs-site
+        transform: rotate(-180deg)
+    &-next
+      //right: $wprev
+      right: 23%
+      +MQ(SL)
+        right: 34%
+      &:before
+        content: ""
+        width: 16px
+        height: 8px
+        display: inline-block
+        //background-image: url('#{$gitPath}theme/icon_next.svg')
+        background-image: url('#{$iconPath}icon_left_mini--white.svg')
+        background-repeat: no-repeat
+        -webkit-background-size: contain
+        background-size: contain
+        background-position: center center
+        text-align: right
+        vertical-align: middle
+        transition: $trs-site
+
+
+/* Slider
+
+.slick-slider
+	position: relative
+	display: block
+	box-sizing: border-box
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-webkit-touch-callout: none
+	-khtml-user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+
+.slick-list
+	position: relative
+	display: block
+	overflow: hidden
+	margin: 0
+	padding: 0
+	&:focus
+		outline: none
+	&.dragging
+		cursor: pointer
+		cursor: hand
+
+.slick-slider
+	.slick-track, .slick-list
+		-webkit-transform: translate3d(0, 0, 0)
+		-moz-transform: translate3d(0, 0, 0)
+		-ms-transform: translate3d(0, 0, 0)
+		-o-transform: translate3d(0, 0, 0)
+		transform: translate3d(0, 0, 0)
+
+.slick-track
+	position: relative
+	top: 0
+	left: 0
+	display: block
+	margin-left: auto
+	margin-right: auto
+	&:before
+		display: table
+		content: ''
+	&:after
+		display: table
+		content: ''
+		clear: both
+
+.slick-loading .slick-track
+	visibility: hidden
+
+.slick-slide
+	display: none
+	float: left
+	height: 100%
+	min-height: 1px
+
+[dir='rtl'] .slick-slide
+	float: right
+
+.slick-slide
+	img
+		display: block
+	&.slick-loading img
+		display: none
+	&.dragging img
+		pointer-events: none
+
+.slick-initialized .slick-slide
+	display: block
+
+.slick-loading .slick-slide
+	visibility: hidden
+
+.slick-vertical .slick-slide
+	display: block
+	height: auto
+	border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+	display: none
+.slider_services--control
+  position: relative
+
+.slider_services--control
+	&:before
+	  content: ""
+	  width: 100%
+	  height: 1.5px
+	  display: block
+	  position: absolute
+	  background-color: $skyblue
+	  top: 71%

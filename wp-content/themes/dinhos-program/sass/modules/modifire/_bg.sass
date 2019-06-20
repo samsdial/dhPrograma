@@ -1,0 +1,58 @@
+// bg
+.bgi
+    //images
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+
+// background colors
+.bgc
+	&--footer
+		background-color: #333333
+	&--cyan
+		background-color: $cyan
+	&--gray
+		background-color: $gray
+	&--gray200
+		background-color: $gray200
+	&--darkgreen
+		background-color: $darkgreen
+	&--gold
+		background-color: $gold
+.bgc
+    &--darkRed
+        background-color: $darkRed
+    &--silver
+        background-color: $silver
+    &--gains
+        background-color: $gainsboro
+    &--white
+        background-color: $white
+    &--blue
+        background-color: $blue
+
+// Gradien bg
+.bgcg
+    &--red
+        background-image: linear-gradient(to right, #e5141d, #e91e31, #eb2943, #ec3554, #ec4063)
+    &--darkblue
+        background-image: linear-gradient(to right top, #182e4f, #182b4a, #172846, #172541, #16223d)
+    &_radius
+        &--darkblue
+            background-image: linear-gradient(45deg, rgba(25,52,91,1) 0%, rgba(25,52,89,1) 53%, rgba(23,30,55,1) 100%)
+.bg
+    &--gradient
+        //+linear-gradient($white, rgba($silver, 0.25))
+    &-box
+        position: absolute
+        left: 50%
+        top: 0px
+        width: 50%
+        height: 100%
+        background-color: $red
+    &--seccion
+        position: relative
+        padding: 85px 0px 60px
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover

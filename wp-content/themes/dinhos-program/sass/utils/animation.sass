@@ -1,0 +1,73 @@
+.scene
+  position: absolute
+  //width: 100%
+  transform: translateY(var(--translateY))
+  will-change: transform
+
+@keyframes d
+  0%
+    top: 0
+    transform: rotate(0deg)
+  45%
+    top: 6px
+    transform: rotate(145deg)
+  75%
+    transform: rotate(130deg)
+  to
+    transform: rotate(135deg)
+
+
+@keyframes e
+  0%
+    top: 6px
+    transform: rotate(135deg)
+  45%
+    transform: rotate(-10deg)
+  75%
+    transform: rotate(5deg)
+  to
+    top: 0
+    transform: rotate(0)
+
+@keyframes f
+  0%
+    bottom: 0
+    transform: rotate(0deg)
+  45%
+    bottom: 6px
+    transform: rotate(-145deg)
+  75%
+    transform: rotate(-130deg)
+  to
+    transform: rotate(-135deg)
+
+@keyframes g
+  0%
+    bottom: 6px
+    transform: rotate(-135deg)
+  45%
+    transform: rotate(10deg)
+  75%
+    transform: rotate(-5deg)
+  to
+    bottom: 0
+    transform: rotate(0)
+
+@keyframes zoomIn
+  from
+    opacity: 0
+    transform: scale3d(0.3, 0.3, 0.3)
+
+  50%
+    opacity: 1
+
+@keyframes move
+  0%, 20%, 50%, 80%, 100%
+    transform: translateY(0)
+  40%
+    transform: translateY(25px)
+  60%
+    transform: translateY(15px)
+
+.move
+  animation: move 2s infinite

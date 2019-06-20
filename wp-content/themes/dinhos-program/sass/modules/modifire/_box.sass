@@ -1,0 +1,214 @@
+// box
+.box
+    &_contact
+        .paragraf
+            font-size: 0.923rem
+            font-weight: 300
+
+    &_agent
+        padding-top: 18rem
+        padding-bottom: 2.5rem
+        text-align: right
+        @media (min-width: 992px)
+            padding-top: 3.5rem
+            padding-bottom: 0
+            text-align: left
+        @media (min-width: 1024px)
+            padding-top: 11rem
+            padding-bottom: 2.5rem
+    &_services--index
+        .paragraf
+            font-size: 1rem
+            line-height: 1.7rem
+
+    &_download--pdf
+        .paragraf
+            font-size: .8rem
+            line-height: 1.7rem
+    &_popup
+        background-color: $white
+        padding: 50px
+        border-radius: 15px
+        width: 550px
+    &_download--pdf
+        position: relative
+        border-bottom: 1px solid $gray
+        padding-bottom: 45px
+        margin-bottom: 45px
+    &_play
+        position: relative
+        &--caption
+            position: absolute
+            top: 5%
+            left: 0
+            width: 100%
+            +MQ(SL)
+              top: 35%
+    &_img
+        &--agent
+            position: relative
+            top: 0
+            left: 0
+            +MQ(SL)
+                top: -34px
+                left: 15%
+                position: absolute
+            img
+                width: 97%
+
+    &_aliances
+        display: inline-block
+    &_logo
+        position: relative
+        transition: $trs-site
+        left: 0
+    &_call
+        position: absolute
+        bottom: 16.6%
+        left: 0
+        width: 100%
+        +MQ(SL)
+            bottom: 18.6%
+    &_flat
+        background-color: $white
+        border-radius: 50px
+        width: 27px
+        height: 27px
+        display: inline-block
+        text-align: center
+        vertical-align: middle
+        padding-top: 1.4px
+        margin-right: 5px
+    &_icon
+        display: block
+        min-height: 100px
+    &_info
+        &--services
+            display: block
+            min-height: 110px
+            .title
+                font-size: 1.3rem
+            .paragraf
+                font-size: .89rem
+                line-height: 1.6rem
+                font-weight: 600
+    &_items
+        &--services
+            i.icon:before
+                transition: $trs-site
+                transform: translateX(0)
+            &:hover
+                i.icon:before
+                    transform: translateX(22px)
+    &_img--app
+        position: relative
+        height: 555px
+        width: 73%
+        margin: 0 auto
+        +MQ(S)
+            height: 650px
+        +MQ(SL)
+            width: 100%
+        img.img_a,
+        img.img_b
+            position: absolute
+        img.img_a
+            bottom: 0
+            left: 0
+            +MQ(SL)
+                bottom: inherit
+                top: 12px
+                left: 19px
+        img.img_b
+            bottom: -100px
+            right: -49px
+            +MQ(SL)
+                bottom: 0
+                right: 19px
+    &_shadow
+        //box-shadow: 0 1px 1px rgba($black, .05)
+        box-shadow: -2px 9px 33px -20px rgba($black,0.75)
+    &_form
+        display: block
+        position: relative
+        width: 100%
+    &_img--about
+        display: block
+        width: 100%
+        position: relative
+        top: 0
+        right: 0
+        +MQ(SL)
+            display: inline-block
+            width: 50%
+            position: absolute
+            bottom: 0
+            top: auto
+            right: 5%
+.float_img
+    //z-index: 99
+    &:after
+        content: ""
+        //display: inline-block
+        position: absolute
+        bottom: 0
+        left: -343px
+        //background: transparent url("/../images/float_render.png")no-repeat center center/contain
+        background: transparent url("./../images/float_render.png")no-repeat center center/contain
+        width: 363px
+        height: 153px
+        z-index: 1
+.form-horizontal
+    z-index: 99
+.deco
+    position: absolute
+    &--left
+        display: inline-block
+        background: transparent url('#{$iconPath}deco_01.svg')no-repeat center center/100%
+        width: 100px
+        height: 89px
+        top: -51px
+        right: 51px
+    &--right
+        background: transparent url('#{$iconPath}deco_02.svg')no-repeat center center/100%
+        width: 84px
+        height: 64px
+        bottom: -34px
+        left: 55px
+        z-index: 2
+
+.raw
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &.first
+        position: fixed
+    &.second
+        background-attachment: fixed
+        +trans(10deg, 1.02, 1.02, 0, 0, 0, 0)
+    &.pos1
+        width: 100%
+        height: 20%
+        +pos(0, 40px)
+    &.pos1a
+        width: 100%
+        height: 20%
+        +pos(0, 40px)
+        +trans(3deg, 1.02, 1.02, 0, 0, 0, 0)
+    &.pos2
+        width: 100%
+        height: 40%
+        +pos(415px, 440px)
+        +trans(-10deg, 0.95, 0.95, 0, 0, 0, 0)
+    &.pos3
+        width: 100%
+        height: 30%
+        +pos(-200px, 500px)
+        +trans(20deg, 1.05, 1.05, 0, 0, 0, 0)
+    &.pos4
+        width: 100%
+        height: 15%
+        +pos(0px, 250px)
+        +trans(-3deg, 1, 1, 0, 0, 0, 0)

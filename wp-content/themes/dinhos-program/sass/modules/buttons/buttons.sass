@@ -1,0 +1,233 @@
+// button
+.btn
+	border: none
+	box-shadow: none
+	font-size: .9rem
+	font-family: $primary-font
+	padding: 0.8em 1.2em
+	cursor: pointer
+	font-weight: 300
+	-webkit-appearance: inherit
+	transition: all 0.3s ease-in-out
+	&:focus
+		box-shadow: inherit
+	&_ghost
+		+btnGhost
+	&_site
+		&--min
+			padding: 0.3rem 0.8rem
+			+font-size(1.2)
+		&--max
+			+font-size(1.5)
+			font-weight: 400
+		&.dropdown-toggle
+			padding-top: 0
+			padding-right: 0
+			padding-left: 0
+			color: $white
+		&--second
+			background-color: rgba($second-color, .8)
+			color: $white
+			&[type="submit"]
+				+font-size(1.7)
+				font-weight: 700
+			+press
+				background-color: rgba($second-color, 1)
+				color: $white
+		&--primary
+			background-color: rgba($first-color, .8)
+			color: $white
+			+press
+				background-color: rgba($first-color, 1)
+				color: $white
+		&--circle
+			padding: 0.8em
+			border-radius: 50%
+			background-color: rgba($first-color, .8)
+			width: 50px
+			height: 50px
+			margin-left: 7.5px
+.btn
+	&_outline
+		border-width: 0.15rem
+		border-style: solid
+		border-color: transparent
+		padding: 0.3em 1.2em
+		&--white
+			border-color: $white
+			color: $white
+			+press
+				background-color: $white
+				color: $gold !important
+.btn
+  &-box
+    z-index: 12
+    margin-top: 0px
+    display: none
+    width: 70%
+    position: relative
+    +MQ(L)
+      display: inline-block
+      width: auto
+  &--full
+    width: 100%
+  &_radius
+    border-radius: 60px
+
+  &_action
+    i.icon:before
+      transition: transform .3s ease-out
+      transform: translate(0 , 0)
+    &:hover
+      i.icon:before
+        transform: translate(12px, 0)
+  &_site
+    padding: .9rem 2.2rem
+    .icon:before
+      transition: $trs-site
+    +press
+      .icon:before
+        transform: translateX(20px)
+    &--submit
+      padding: .9rem 2.2rem
+      font-size: .9rem
+    &--app
+      padding: .45rem .9rem
+      -webkit-border-radius: 12px
+      -moz-border-radius: 12px
+      border-radius: 12px
+    &_bgcg
+        &--red
+          background-image: linear-gradient(to right, #e5141d, #e91e31, #eb2943, #ec3554, #ec4063)
+          color: $white
+          box-shadow: 0 9px 17px rgba($darkRed, 0.3)
+          +press
+            box-shadow: 0 9px 17px rgba($white, 0)
+            color: $white
+    &--black
+      background-color: $black
+      color: $white
+      box-shadow: 0 9px 17px rgba($black, 0.3)
+      +press
+        box-shadow: 0 0px 0px rgba($white, 0)
+    &--darkred
+      background-color: $darkRed
+      color: $white
+      +press
+        background-color: $red
+        color: $white
+    span.icon
+      &:after
+        content: "+"
+        margin-right: 12px
+    &--gray
+      background-color: silver
+      color: $white
+.link
+  vertical-align: middle
+  position: relative
+  display: block
+  &--play
+    position: relative
+    content: ""
+    border-radius: 50%
+    height: 80px
+    width: 80px
+    margin: 25px
+    background-image: linear-gradient(to right, #e5141d, #e91e31, #eb2943, #ec3554, #ec4063)
+    display: inline-block
+    transition: $trs-site
+    box-shadow: 0 9px 17px rgba($darkRed, 0.3)
+    .triangle
+      width: 100%
+      position: absolute
+      top: 30%
+      left: 3px
+      &:after
+        content: ''
+        display: inline-block
+        width: 0
+        height: 0
+        border-left: 18px solid $white
+        border-top: 15px solid transparent
+        border-bottom: 15px solid transparent
+        z-index: 1
+    +press
+      box-shadow: 0 9px 17px rgba($white, 0)
+  &--upper
+    text-transform: uppercase
+  &--darkred
+    color: $darkRed
+    +press
+      color: $red
+  &--darkblue
+    color: $darkBlue
+    +press
+      color: $blue
+
+.lity
+  $wprev: 44px
+  &-close
+    background-image: linear-gradient(to right, #e5141d, #e91e31, #eb2943, #ec3554, #ec4063)
+    width: $wprev
+    height: $wprev
+    border-radius: 50%
+    transition: $trs-site
+    white-space: nowrap
+    font-size: 0
+    &:focus
+      outline: none
+    +press
+      background-image: linear-gradient(to right, #e5141d, #e91e31, #eb2943, #ec3554, #ec4063)
+      white-space: nowrap
+      font-size: 0
+      box-shadow: 0 9px 17px rgba($darkRed, 0.3)
+    &:before
+      content: ""
+      width: 16px
+      height: 8px
+      display: inline-block
+      background-image: url('#{$iconPath}close.svg')
+      background-repeat: no-repeat
+      -webkit-background-size: contain
+      background-size: contain
+      background-position: center center
+      text-align: right
+      vertical-align: middle
+      transition: $trs-site
+.btn
+  $wprev: 44px
+  &-close
+    background-image: linear-gradient(to right, #e5141d, #e91e31, #eb2943, #ec3554, #ec4063)
+    width: $wprev
+    height: $wprev
+    border-radius: 50%
+    transition: $trs-site
+    white-space: nowrap
+    font-size: 0
+    position: absolute
+    right: -17px
+    top: -13px
+    border: 1px solid $darkRed
+    box-shadow: 0 9px 17px rgba($darkRed, 0.3)
+    z-index: 10000
+    &:focus
+      outline: none
+    +press
+      background-image: linear-gradient(to right, #e5141d, #e91e31, #eb2943, #ec3554, #ec4063)
+      white-space: nowrap
+      font-size: 0
+      box-shadow: 0 9px 17px rgba($white, 0)
+    &:before
+      content: ""
+      width: 16px
+      height: 8px
+      display: inline-block
+      background-image: url('#{$iconPath}close.svg')
+      background-repeat: no-repeat
+      -webkit-background-size: contain
+      background-size: contain
+      background-position: center center
+      text-align: right
+      vertical-align: middle
+      transition: $trs-site

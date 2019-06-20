@@ -1,0 +1,230 @@
+.box
+	&_pay
+		&--card
+			position: relative
+		&--modal
+			position: absolute
+			width: 220px
+			top: 72px
+			right: 0
+			display: none
+			&.open
+				display: block
+			.box_modal
+				background-color: $white
+				border-radius: 12px
+				position: relative
+				&:before
+					content: ""
+					width: 0
+					height: 0
+					background-color: transparent
+					border-bottom: solid 6px $white
+					border-left: solid 6px transparent
+					border-right: solid 6px transparent
+					position: absolute
+					top: -5px
+					right: 22px
+				.footer
+					.btn_pay
+						+font-size(1.3)
+						padding: 0.2rem 1.2rem
+						width: 100%
+						display: block
+						font-weight: 800
+						color: $white
+						background-color: $cyan
+						border-top-right-radius: 0
+						border-top-left-radius: 0
+						border-bottom-right-radius: 12px
+						border-bottom-left-radius: 12px
+
+				.header
+					padding: 6px
+					.title,
+					.close
+						display: inline-block
+					.title
+						+font-size(.9)
+						font-weight: 100
+					.close
+						text-align: right
+				.content
+					background-color: $white
+					&--item
+						.select
+							border-top: 1px solid $gray
+							border-bottom: 1px solid $gray
+					.action
+						a.link
+							color: $gray
+							+font-size(.7)
+							margin-top: 22px
+							margin-right: 7px
+	&_pay_introtop
+		display: inline-block
+		margin-top: -20px
+		margin-left: 35px
+		padding: 6px
+		background-color: $dimGray
+		border-top-right-radius: 12px
+		border-top-left-radius: 12px
+		font-weight: 100
+		+font-size(1.8)
+	&_my_card
+		background-color: $dimGray
+		&--list
+			.title
+				span.circle-cyan
+					width: 12px
+					height: 12px
+					background-color: $cyan
+					display: inline-block
+					border-radius: 50%
+				span
+					font-weight: 100
+			a.link_addcard
+				color: $cyan
+				vertical-align: middle
+				span
+					vertical-align: middle
+		&--coupon
+			padding: 5px 0
+			border-top: 1px solid $gray
+			border-bottom: 1px solid $gray
+			.info
+				+font-size(1.2)
+				font-weight: 100
+				a.link_more_pay
+					background-color: $cyan
+					color: $white
+					padding: 5px 12px
+		&--item
+			.info
+				+font-size(1.2)
+				font-weight: 100
+		&--total
+			.title
+				+font-size(1.8)
+
+.box_pay
+	&_card
+		margin-top: 35px
+		.header
+			background-color: $dimGray
+			border-top-right-radius: 12px
+			border-top-left-radius: 12px
+			padding: 6px 12px
+			.title
+				+font-size(2)
+		.footer
+			.btn_pay
+				+font-size(1.3)
+				width: 100%
+				display: block
+				font-weight: 800
+				color: $white
+				background-color: $cyan
+				border-top-right-radius: 0
+				border-top-left-radius: 0
+				border-bottom-right-radius: 12px
+				border-bottom-left-radius: 12px
+
+.box_pay
+	padding-top: 280px
+	padding-bottom: 180px
+	+MQ(SL)
+		padding-top: 225px
+		padding-bottom: 180px
+	&_intro
+		background-color: $dimGray
+		border-radius: 12px
+		&--header
+			padding-top: 20px
+			padding-left: 20px
+			padding-bottom: 10px
+			.title
+				+font-size(1.6)
+		&--content
+			//padding-top: 12px
+			padding-bottom: 12px
+			.data
+				.image
+					display: inline-block
+				.quantity
+					.title
+						+font-size(1.2)
+					.action
+						a
+							color: $gray
+							text-decoration: underline
+
+
+				.info
+					padding-top: 0
+					.title
+						font-weight: 100
+					.list
+						li
+							position: relative
+							vertical-align: middle
+							&:before
+								content: ""
+								background: url('#{$iconPath}icon_bullet--gray.svg')no-repeat center center/100%
+								width: 9px
+								height: 9px
+								display: inline-block
+								margin-right: 5px
+								vertical-align: middle
+						li
+							span
+								font-weight: 500
+								vertical-align: middle
+.box_quantity
+	width: 85%
+	text-align: center
+	margin: 0 auto
+	.input-group
+		.form-control
+			height: calc(1.5em + .35rem + 0px)
+			text-align: center
+		&-text
+			font-size: 0.1rem
+			position: relative
+			background-color: transparent
+			padding: 6px 8px
+			border: 1.5px solid $silver
+			cursor: pointer
+		&-prepend
+			position: relative
+			&:first-child
+				.input-group-text
+					border-top-left-radius: 22px
+					border-bottom-left-radius: 22px
+					border-right: 0 solid transparent
+			&:last-child
+				.input-group-text
+					border-top-right-radius: 22px
+					border-bottom-right-radius: 22px
+					border-left: 0 solid transparent
+.box_quantity
+	&--min
+		.input-group
+			.form-control
+				height: calc(1.5em + .005rem + 0px)
+				width: 12px
+				padding: 3px
+				text-align: center
+			&-text
+				padding: 2px
+
+.box_pay_intro--total
+	padding-left: 20px
+	padding-top: 5px
+	padding-bottom: 12px
+	padding-right: 22px
+	.subtitle
+		+font-size(1.2)
+	.price,
+	.title
+		+font-size(1.8)

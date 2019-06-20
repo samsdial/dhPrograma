@@ -1,0 +1,198 @@
+.box_map
+  position: relative
+  +MQMAX(SL)
+    padding-bottom: 600px
+  +MQMAX(S)
+    padding-bottom: 650px
+  @media (min-width: $phablet)
+    padding-bottom: 890px
+  +MQ(SL)
+    padding: 182px 110px 111px
+.map_envios
+  display: block
+  width: 100%
+  height: 600px
+  background-image: url('#{$iconPath}map002.svg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: contain
+  position: relative !important
+  top: 0
+  left: 0
+  z-index: 1
+.map
+  display: block
+  width: 100%
+  height: 806px
+  background-image: url('#{$iconPath}map001.svg')
+  background-repeat: no-repeat
+  background-position: -160px 0
+  background-size: 250%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+  +MQ(S)
+    background-position: -110px 0
+    background-size: 200%
+    height: 800px
+  @media (min-width: $phablet)
+      height: 999px
+  +MQ(M)
+    background-position: -157px 0
+    background-size: 140%
+    height: 973px
+  +MQ(SL)
+    background-position: -240px 0
+  +MQ(L)
+    background-position: -260px 0
+  +MQ(XL)
+    background-position: -49px 61px
+    background-size: 93%
+    height: 900px
+  &:after
+    content: ""
+    background-color: rgba($white,0)
+    background: linear-gradient(to right, rgba($white,0) 0%, rgba($white,0.79) 67%, rgba($white,0.81) 74%, rgba($white,0.99) 94%, rgba($white,1) 100%)
+    width: 100%
+    height: 806px
+    display: inherit
+    opacity: .4
+    @media (min-width: $phablet)
+      height: 999px
+    +MQ(M)
+      height: 997px
+      background: linear-gradient(to right, rgba($white,0) 0%, rgba($white,0.79) 43%, rgba($white,0.81) 44%, rgba($white,0.99) 77%, rgba($white,1) 78%)
+      opacity: .5
+    +MQ(SL)
+      height: 800px
+      opacity: 1
+    //+MQ(L)
+      height: 800px
+    //+MQ(XL)
+      height: 800px
+    //@media (min-width: 1350px)
+      height: 800px
+  &_content
+    position: relative
+    z-index: 2
+  &-info
+    padding-top: 128px
+    @media (min-width: 992px)
+      padding-left: 0px
+      padding-top: 22px
+    @media (min-width: 1200px)
+      padding-left: 57px
+    span
+      +MQMAX(S)
+        display: block
+  &_point
+    position: absolute
+    top: 370px
+    left: 0
+    //left: 141px
+    text-align: center
+    width: 100%
+    @media(min-width: $phone)
+      top: 403px
+    @media(min-width: 450px)
+      top: 467px
+    @media(min-width: 500px)
+      top: 416px
+    @media(min-width: 550px)
+      top: 450px
+    @media(min-width: $phablet)
+      top: 463px
+    @media(min-width: 600px)
+      top: 498px
+    @media(min-width: $tablet-small)
+      top: 538px
+    @media(min-width: 750px)
+      top: 650px
+    +MQ(M)
+      width: auto
+      top: 445px
+      left: 6px
+      text-align: left
+      padding-left: 7%
+    @media (min-width: 800px)
+      top: 465px
+    @media (min-width: 850px)
+      top: 500px
+    @media (min-width: 900px)
+      top: 530px
+    @media (min-width: 950px)
+      top: 565px
+    +MQ(SL)
+      top: 156px
+      left: 0
+      padding-left: 0
+    @media (min-width: 1000px)
+      top: 146px
+    +MQ(L)
+      top: 167px
+      left: -10px
+    @media (min-width: 1100px)
+      top: 190px
+      left: 0
+    @media (min-width: 1150px)
+      top: 215px
+      left: 26px
+    @media (min-width: 1200px)
+      top: 230px
+      left: 52px
+    +MQ(XL)
+      top: 157px
+      left: 128px
+    @media (min-width: 1350px)
+      top: 185px
+      left: 150px
+    @media (min-width: 1450px)
+      top: 200px
+      left: 180px
+    &--miami
+      margin-bottom: 9px
+      @media (min-width: $phablet)
+        margin-bottom: 32px
+      @media (min-width: $tablet-small)
+        margin-bottom: 51px
+      +MQ(SL)
+        margin-bottom: 14px
+      +MQ(L)
+        margin-bottom: 22px
+      +MQ(XL)
+        margin-bottom: 9px
+      .map_point--content
+
+        +MQ(M)
+          padding-left: 92px
+        +MQ(SL)
+          padding-left: 30px
+        +MQ(XL)
+          padding-left: 37px
+        .icon_point--line:after
+          width: 80px
+    &--bogota
+      margin-left: 46px
+      @media (min-width: $phone)
+        margin-left: 0px
+      @media(min-width: 450px)
+        margin-left: 100px
+      @media (min-width: $tablet-small)
+        margin-left: 100px
+      +MQ(S)
+        margin-left: 62px
+      +MQ(M)
+        margin-left: 35px
+      +MQ(SL)
+        margin-left: 25px
+    &--content
+      display: inline-block
+      +MQ(M)
+        margin-top: -20px
+        padding-left: 27px
+        margin-top: 0
+      +MQ(L)
+        padding-left: 47px
+      +MQ(XL)
+        padding-left: 67px

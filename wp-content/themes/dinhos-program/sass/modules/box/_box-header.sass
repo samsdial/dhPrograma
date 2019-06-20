@@ -1,0 +1,38 @@
+.box
+	&_header
+		background-color: transparent
+		position: relative
+		&--logo
+			position: relative
+	&_navbar
+		background-color: rgba($nav-color, .6)
+		&--info
+			.paragraf
+				vertical-align: top
+				display: inline-block
+				color: $white
+				font-weight: 900
+				+font-size(0.7)
+				@media(min-width: 991px)
+					+font-size(.8)
+.nav_scroll.box_navbar
+	background-color: rgba($nav-color, 1)
+
+.box
+	&_slider
+		&--info
+			.title,
+			.paragraf
+				color: $white
+			.title
+				+font-size(3)
+				+text-shadow(0, .1px, 12px, $black)
+				+line-height(3)
+				font-weight: 400
+				margin-bottom: 9px
+			.paragraf
+				+font-size(1.5)
+				font-weight: 400
+				+text-shadow(0, .2px, 9px, $black)
+				margin-bottom: 25px
+				margin-top: 10px

@@ -1,0 +1,29 @@
+// logos
+//.logo
+    display: inline-block
+	position: relative
+
+.logo
+	display: inline-block
+	position: relative
+	&--header
+		font-family: $logoFont
+		+font-size(2.2)
+		color: $white
+		+MQ(SL)
+			padding-left: 122px
+.nav_scroll
+	.logo--header,
+	.navbar-nav li a
+	  color: $gray
+
+
+
+.box_header--logo
+  +MQMAX(SL)
+	  width: 100%
+	  margin: 15px 0
+.logo--header
+  +MQMAX(SL)
+		width: 100%
+		text-align: center

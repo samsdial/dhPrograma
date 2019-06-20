@@ -1,0 +1,291 @@
+.navbar
+	&_site
+		margin-top: 64px
+		@media (min-width: 576px)
+			margin-top: 32px
+			padding-top: 1.5em
+			padding-bottom: 1.5em
+		+MQ(SL)
+			margin-top: 33px
+
+		&--list
+			a
+				color: $white
+				+font-size(.9)
+				font-weight: 400
+				+MQ(SL)
+					text-align: center
+
+			li
+				.dropdown-menu
+					border-radius: inherit
+					+MQ(SL)
+						padding: 9px 0 0
+					.dropdown-item
+						margin-bottom: 5px
+						padding-left: 16px
+						padding-right: 16px
+						color: $site-gray !important
+						background-color: transparent
+						+press
+							color: $second-color !important
+							background-color: rgba($site-gray, .1)
+
+.navbar-nav
+	.dropdown-menu
+		padding: 22px 0
+		border: 1px solid transparent
+		+MQ(SL)
+			padding: 22px
+			border: 1px solid rgba($gray, .15)
+
+		.dropdown-item
+			margin: 0
+			margin-bottom: 12px
+	.nav-item.dropdown
+		.dropdown-item+
+			.dropdown-menu
+				left: 100%
+				top: -12px
+
+.dropdown-menu .dropdown-toggle::after
+	vertical-align: middle
+	border-left: 4px solid
+	border-bottom: 4px solid transparent
+	border-top: 4px solid transparent
+
+.nav-access
+	li
+		&:first-child
+			a.btn
+				padding-left: 0
+				padding-right: 0
+				margin-right: 2.2rem
+				margin-left: 2.2rem
+				border-bottom: 2px solid transparent
+				+press
+					color: $white
+					border-bottom: 2px solid $white
+
+.nav
+	&_site
+		li
+			a, a.btn
+				text-transform: uppercase
+				color: $white
+				font-weight: 700
+				font-family: $second-font
+				font-size: .7rem
+				border-bottom: 2px solid transparent
+				transition: $trs-site
+				+MQ(SL)
+					margin-left: .5rem
+					padding-left: 0 !important
+					margin-right: .5rem
+					padding-right: 0 !important
+
+			a
+				+press
+					border-bottom: 2px solid $white
+
+				&.active
+					border-bottom: 2px solid $darkRed
+
+			.btn
+				font-size: .7rem
+
+			&.nav-item
+				&:last-child
+					a
+						margin-right: 45px
+
+	&bar-nav
+		li
+			&.nav-access
+				&:last-child
+					a
+						padding: .9rem 2.2rem
+
+	&bar-nav
+		li
+			a,
+			a.btn
+				color: $white
+
+	&_scroll
+		background-color: $white
+		box-shadow: 0px 10px 12px 0px rgba($black, .3)
+		.nav_site
+			+MQ(SL)
+				border-right: 1px solid $darkRed
+
+			li
+				a, a.btn
+					+MQ(SL)
+						color: $darkBlue
+
+				a
+					+press
+						border-bottom: 2px solid $gray
+
+		.nav-access
+			li
+				&:first-child
+					a.btn
+						+press
+							color: $darkBlue
+							border-bottom: 2px solid $gray
+
+				&:last-child
+					a.btn
+						+MQ(SL)
+							color: $white
+
+			li
+				a.btn_outline--white
+					+MQ(SL)
+						border-color: $darkRed !important
+
+			li
+				a.btn
+					+MQ(SL)
+						color: $darkBlue
+
+	&-access
+		li
+			a,
+			.btn
+				font-size: .7rem
+
+		li
+			padding-right: 5px
+			padding-left: 5px
+			+MQMAX(SL)
+				margin-bottom: 5px
+
+.navbar.navbar-transparent .navbar-toggler .navbar-toggler-bar
+	background-color: $white
+
+.navbar-toggler .navbar-toggler-icon
+	background-color: $first-color
+
+.navbar-toggler .navbar-toggler-icon
+	display: block
+	position: relative
+	width: 24px
+	height: 2px
+	border-radius: 1px
+	margin: 0 auto
+	margin-bottom: 4px
+
+.bar1
+	top: 0
+	animation: e .5s 0s
+	animation-fill-mode: forwards
+
+.bar1,
+.bar2,
+.bar3
+	outline: 1px solid transparent
+
+.toggled .bar1
+	+MQMAX(L)
+		top: 6px
+		animation: d .5s 0s
+		animation-fill-mode: forwards
+
+.toggled .bar2
+	+MQMAX(L)
+		opacity: 0
+
+.toggled .bar3
+	+MQMAX(L)
+		bottom: 6px
+		animation: f .5s 0s
+		animation-fill-mode: forwards
+
+.nav_site
+	border-right: 1px solid $white
+	+MQ(L)
+		border-right: 2px solid $white
+	+MQMAX(SL)
+		border-right: 0px solid transparent
+		border-bottom: 2px solid $darkRed
+
++MQ($SL)
+	.navbar-expand-lg .navbar-collapse
+		flex-basis: auto
+		display: flex !important
+
+.navbar-translate
+	transition: all .33s cubic-bezier(.685, .0473, .346, 1)
+
+.nav-open
+	.box_logo
+		left: -122px
+
+	.navbar-translate
+		+MQMAX(SL)
+			transform: translateX(-230px)
+
+	.navbar-collapse
+		+MQMAX(SL)
+			transform: translateX(0)
+
+	.nav-access li a,
+	.nav_site li a,
+	.nav-access li a.btn,
+	.nav_site li a.btn
+		+MQMAX(SL)
+			color: $darkBlue
+
+	.nav-access li:last-child .btn
+		+MQMAX(SL)
+			color: $white
+
+.navbar-collapse:before
+	@media (max-width: 991px)
+		content: "Destino Florida"
+		font-family: $logoFont
+		+font-size(1.5)
+		background-color: $cyan
+		color: $white
+		display: block
+		width: 100%
+		padding: 10px 5px
+
+
+.navbar-collapse
+	ul
+		padding-right: 5px
+		padding-left: 13px
+		padding-top: 5px
+
+.navbar-collapse
+	@media (max-width: 991px)
+		position: fixed
+		display: block !important
+		top: 0
+		height: 100%
+		width: 230px
+		right: 0
+		z-index: 1032
+		visibility: visible
+		background-color: $white
+		overflow-y: visible
+		border-top: none
+		text-align: left
+		border-left: 5px solid $cyan
+		padding: 0
+		transform: translateX(230px)
+		transition: all .33s cubic-bezier(.685, .0473, .346, 1)
+
+a.dropdown-item
+	color: $darkBlue !important
+	+press
+		color: $darkRed !important
+		background-color: transparent
+
+.nav-open
+	.navbar_site--list a
+		color: $gray

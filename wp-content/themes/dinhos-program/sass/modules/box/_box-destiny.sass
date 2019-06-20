@@ -1,0 +1,58 @@
+.box_destiny
+  .row
+  		height: 800px
+  		background-color: rgba($darkgreen, .5) !important
+  		+MQ(SL)
+			  height: 495px
+  &--item
+	  padding: 22px 45px
+	  color: $white
+	  .title
+		  +font-size(3)
+		  font-family: $logoFont
+		  +MQ(SL)
+	  			+font-size(6)
+.box_destiny
+	&--intro
+		.title,
+		.subtitle
+			color: $darkgreen
+			line-height: 1.1
+		.title
+			+font-size(2.3)
+			letter-spacing: .03rem
+		.subtitle
+			font-weight: 100
+			+font-size(1.32)
+	&--col
+		color: $darkgreen
+		.icon,
+		.title,
+		.paragraf
+			margin-bottom: 12px
+		.paragraf
+			font-weight: 100
+			+font-size(1.2)
+			text-align: justify
+		.title
+			+font-size(1.8)
+	&_city
+		.city
+			+font-size(2.5)
+			color: $darkgreen
+.box_destiny--myitem
+	-webkit-background-size: cover
+	background-size: cover
+	height: 250px
+	position: relative
+	.title
+		background-color: rgba($gold, .8)
+		text-align: left
+		+font-size(1.8)
+		vertical-align: baseline
+		width: 100%
+		position: absolute
+		bottom: 25px
+		text-transform: uppercase
+		color: $white
+		padding: 6px

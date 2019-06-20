@@ -1,0 +1,35 @@
+.box_question
+	margin-top: 200px
+	margin-bottom: 100px
+.box_question--intro
+	.title
+		+font-size(2.5)
+		color: $darkgreen
+.box_question--accordion
+	.card
+		border: inherit
+		&-header
+			border: inherit
+			background-color: transparent
+			border-bottom: 2px solid $cyan
+			.title
+				font-style: italic
+				color: $gray
+				+font-size(1.2)
+				&:after
+					content: ""
+					width: 26px
+					height: 26px
+					border-radius: 50%
+					background-color: $cyan
+					display: inline-block
+					position: absolute
+					right: 0
+			a[aria-expanded="true"] + .title:after
+				background-color: $gold
+					
+
+		&-body
+			.paragraf
+				color: $gray
+				font-weight: 100
